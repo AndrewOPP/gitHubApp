@@ -6,7 +6,7 @@ input.addEventListener("change", findInfo)
 const h1 = document.querySelector("h1")
     
 function findInfo(event) {
-    userLogin = event.currentTarget.value
+    let userLogin = event.currentTarget.value
     fetch(`https://api.github.com/users/${userLogin}`)
         .then(response => {
             if (!response.ok) throw new Error(Notify.failure('User does not exist'))
