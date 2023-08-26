@@ -65,15 +65,63 @@ input {
   |============================
 */
 
-body {
-    background-color: rgb(51, 38, 124);
+.css-selector {
+
 }
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+body {
+    background-color: #33267c;
+    position: relative;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+
+.main-project-title {
+    transition: all 1s ease;
+    user-select: none;
+    scale: 1.2;
+    background: linear-gradient(270deg, #315c80, #483b94);
+    background-size: 400% 400%;   
+    -webkit-animation: AnimationName 8s ease-in infinite;
+    animation: AnimationName 8s ease-in infinite;
+    color: transparent;
+    -webkit-text-stroke: 10px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400% 400%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    z-index: -999;
+    position: absolute;
+    top: 150px;
+    letter-spacing: 20px;
+    font-size: 300px;
+}
+
 
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 50px;
     flex-direction: column;
 
 }
@@ -107,7 +155,7 @@ input[type="text"] {
     border-radius: 10px;
     width: 285px;
     height: 70px;
-    background-color: #4d1192;
+    background-color: #3b2079;
 }
 
 .profile-foto {
@@ -119,6 +167,7 @@ input[type="text"] {
 }
 
 .profile-information-container {
+
     padding-left: 20px;
 }
 
